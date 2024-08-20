@@ -16,7 +16,7 @@ struct GalleryView: View {
             }
         }
         .padding(32)
-        .navigationTitle("Gallery View")
+        .navigationTitle("Construções")
     }
 }
 

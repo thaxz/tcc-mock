@@ -11,12 +11,20 @@ struct HomeView: View {
     @StateObject private var routeManager = NavigationRouter()
     var body: some View {
         NavigationStack(path: $routeManager.routes){
-            VStack {
-                MockButton(text: "Push view galeria") {
-                    routeManager.push(to: .galleryView)
-                }
-                .padding(32)
-                .navigationTitle("Home View")
+            TabView{
+                TimelineView()
+                    .tabItem {
+                        Label("Timeline", systemImage: "clock")
+                    }
+                GalleryView()
+                    .tabItem {
+                        Label("Timeline", systemImage: "building.columns.fill")
+                    }
+                MapView()
+                    .tabItem {
+                        Label("Timeline", systemImage: "map.fill")
+                    }
+                
             }
             .navigationDestination(for: Route.self) { route in
                 route

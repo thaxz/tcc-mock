@@ -16,7 +16,7 @@ struct MapView: View {
             }
         }
         .padding(32)
-        .navigationTitle("Map View")
+        .navigationTitle("Mapa")
     }
 }
 
