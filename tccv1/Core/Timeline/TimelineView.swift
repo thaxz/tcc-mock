@@ -7,42 +7,41 @@
 
 import SwiftUI
 
+// TODO: doc
 struct TimelineView: View {
     @EnvironmentObject private var routerManager: NavigationRouter
+    @ObservedObject var viewModel = TimelineViewModel()
     var body: some View {
-        VStack {
-            MockButton(text: "Push view galeria") {
-                routerManager.push(to: .galleryView)
-            }
-            .padding(32)
-            HStack(spacing: 16){
-                Image("mockImg")
-                    .resizable()
-                    .frame(width: 160, height: 130)
-                VStack(alignment: .leading, spacing: 12){
-                    Text("Construção da Igreja de São Pedro")
-                        .font(.system(size: 20, weight: .semibold))
-                        .lineSpacing(6)
-                        .lineLimit(3)
-                    Text("12/13/1989")
-                        .font(.system(size: 14, weight: .regular))
-                        .lineLimit(1)
+        ScrollView{
+            VStack(spacing: 16){
+                ForEach(viewModel.timelineSections){ section in
+                    headerSection(year: section.year)
+                    ForEach(section.events) { event in
+                        TimelineRow(event: event)
+                    }
                 }
             }
-            .padding(.trailing, 16)
-            .padding(16)
         }
+        .padding(20)
         .navigationTitle("Timeline")
     }
 }
 
 //MARK: - Components
-// TODO: row && header // using timelineEvent
 extension TimelineView {
     
-    
-    
-    
+    func headerSection(year: String) -> some View {
+        ZStack(alignment: .leading){
+            Rectangle()
+                .foregroundStyle(Color.theme.rowBg)
+                .border(width: 2, edges: [.bottom], color: .theme.stroke)
+            Text(year)
+                .font(.system(size: 20, weight: .semibold))
+                .foregroundStyle(Color.theme.label)
+                .padding(.leading ,8)
+        }
+        .frame(height: 40)
+    }
 }
 
 #Preview {

@@ -18,5 +18,8 @@ extension PreviewProvider {
 class DeveloperPreview {
     static let shared = DeveloperPreview()
     private init() {}
+    
     let mockConstruction = Construction(name: "Cornelia ST")
+    let mockEvent = TimelineEvent(title: "Construção da Igreja de São Pedro",
+                                  date: "12/13/1989", headerImage: "mockImg")
 }

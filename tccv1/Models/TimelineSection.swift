@@ -7,9 +7,13 @@
 
 import Foundation
 
-struct TimelineSection {
+struct TimelineSection: Identifiable {
     
     let year: String
     let events: [TimelineEvent]
+    
+    var id: String {
+        events[0].title + year
+    }
     
 }

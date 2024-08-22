@@ -7,10 +7,14 @@
 
 import Foundation
 
-struct TimelineEvent {
+struct TimelineEvent: Identifiable {
     
     let title: String
     let date: String
     let headerImage: String
+    
+    var id: String {
+        title + date
+    }
     
 }

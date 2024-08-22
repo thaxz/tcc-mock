@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E96E72CA2C76B674000B05BA /* TimelineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96E72C92C76B674000B05BA /* TimelineRow.swift */; };
+		E96E72CC2C76B90E000B05BA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96E72CB2C76B90E000B05BA /* Color.swift */; };
+		E96E72CF2C76BEE5000B05BA /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96E72CE2C76BEE5000B05BA /* View.swift */; };
+		E96E72D12C76BF06000B05BA /* EdgeBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96E72D02C76BF06000B05BA /* EdgeBorder.swift */; };
+		E96E72D32C76C001000B05BA /* TimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96E72D22C76C001000B05BA /* TimelineViewModel.swift */; };
+		E96E72D52C76C594000B05BA /* TabItens.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96E72D42C76C594000B05BA /* TabItens.swift */; };
 		E9AEB5302C741A0A0084A54E /* TimelineEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AEB52F2C741A0A0084A54E /* TimelineEvent.swift */; };
 		E9AEB5322C741A1A0084A54E /* TimelineSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AEB5312C741A1A0084A54E /* TimelineSection.swift */; };
 		E9D468472C6ED1920054F902 /* tccv1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D468462C6ED1920054F902 /* tccv1App.swift */; };
@@ -25,6 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E96E72C92C76B674000B05BA /* TimelineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineRow.swift; sourceTree = "<group>"; };
+		E96E72CB2C76B90E000B05BA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E96E72CE2C76BEE5000B05BA /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		E96E72D02C76BF06000B05BA /* EdgeBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeBorder.swift; sourceTree = "<group>"; };
+		E96E72D22C76C001000B05BA /* TimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewModel.swift; sourceTree = "<group>"; };
+		E96E72D42C76C594000B05BA /* TabItens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItens.swift; sourceTree = "<group>"; };
 		E9AEB52F2C741A0A0084A54E /* TimelineEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEvent.swift; sourceTree = "<group>"; };
 		E9AEB5312C741A1A0084A54E /* TimelineSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineSection.swift; sourceTree = "<group>"; };
 		E9D468432C6ED1920054F902 /* tccv1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tccv1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E96E72CD2C76BED1000B05BA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E96E72D02C76BF06000B05BA /* EdgeBorder.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		E9D4683A2C6ED1920054F902 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +97,7 @@
 				E9D468542C6ED20F0054F902 /* Core */,
 				E9D468612C6ED3410054F902 /* Models */,
 				E9D468652C6ED4080054F902 /* Managers */,
+				E96E72CD2C76BED1000B05BA /* Utilities */,
 				E9D4686A2C6ED6950054F902 /* Extensions */,
 				E9D4684A2C6ED1940054F902 /* Assets.xcassets */,
 				E9D4684C2C6ED1940054F902 /* Preview Content */,
@@ -117,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				E9D468592C6ED26A0054F902 /* TimelineView.swift */,
+				E96E72D22C76C001000B05BA /* TimelineViewModel.swift */,
 			);
 			path = Timeline;
 			sourceTree = "<group>";
@@ -152,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				E9D468632C6ED4020054F902 /* Route.swift */,
+				E96E72D42C76C594000B05BA /* TabItens.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -168,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				E9D4686B2C6ED6B50054F902 /* PreviewProvider.swift */,
+				E96E72CB2C76B90E000B05BA /* Color.swift */,
+				E96E72CE2C76BEE5000B05BA /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -183,6 +208,7 @@
 		E9D468702C6ED9E90054F902 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E96E72C92C76B674000B05BA /* TimelineRow.swift */,
 				E9D468712C6ED9F20054F902 /* MockButton.swift */,
 			);
 			path = Components;
@@ -258,17 +284,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96E72CF2C76BEE5000B05BA /* View.swift in Sources */,
 				E9D468692C6ED4C70054F902 /* Construction.swift in Sources */,
 				E9D468472C6ED1920054F902 /* tccv1App.swift in Sources */,
 				E9D4685D2C6ED2B40054F902 /* MapView.swift in Sources */,
+				E96E72D52C76C594000B05BA /* TabItens.swift in Sources */,
 				E9D4686F2C6ED9410054F902 /* HomeView.swift in Sources */,
 				E9D468672C6ED43D0054F902 /* NavigationManager.swift in Sources */,
 				E9D4685A2C6ED26A0054F902 /* TimelineView.swift in Sources */,
+				E96E72D32C76C001000B05BA /* TimelineViewModel.swift in Sources */,
 				E9D468642C6ED4020054F902 /* Route.swift in Sources */,
 				E9AEB5322C741A1A0084A54E /* TimelineSection.swift in Sources */,
+				E96E72D12C76BF06000B05BA /* EdgeBorder.swift in Sources */,
+				E96E72CC2C76B90E000B05BA /* Color.swift in Sources */,
 				E9D468722C6ED9F20054F902 /* MockButton.swift in Sources */,
 				E9D468602C6ED2E10054F902 /* DetailView.swift in Sources */,
 				E9D4686C2C6ED6B50054F902 /* PreviewProvider.swift in Sources */,
+				E96E72CA2C76B674000B05BA /* TimelineRow.swift in Sources */,
 				E9D468572C6ED2370054F902 /* GalleryView.swift in Sources */,
 				E9AEB5302C741A0A0084A54E /* TimelineEvent.swift in Sources */,
 			);
