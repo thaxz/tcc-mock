@@ -13,7 +13,7 @@ struct TimelineView: View {
     @ObservedObject var viewModel = TimelineViewModel()
     var body: some View {
         ScrollView{
-            VStack(spacing: 16){
+            VStack(spacing: 24){
                 ForEach(viewModel.timelineSections){ section in
                     headerSection(year: section.year)
                     ForEach(section.events) { event in
@@ -34,11 +34,12 @@ extension TimelineView {
         ZStack(alignment: .leading){
             Rectangle()
                 .foregroundStyle(Color.theme.rowBg)
+                .cornerRadius(8, corners: [.topLeft, .topRight])
                 .border(width: 2, edges: [.bottom], color: .theme.stroke)
             Text(year)
                 .font(.system(size: 20, weight: .semibold))
                 .foregroundStyle(Color.theme.label)
-                .padding(.leading ,8)
+                .padding(.leading, 8)
         }
         .frame(height: 40)
     }

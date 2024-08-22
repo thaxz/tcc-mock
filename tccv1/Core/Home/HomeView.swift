@@ -10,7 +10,7 @@ import SwiftUI
 //TODO: Organize && doc
 struct HomeView: View {
     @StateObject private var routeManager = NavigationRouter()
-    @State var selection: TabItens = .timeline
+    @State var selection: TabItens = .gallery
     var body: some View {
         NavigationStack(path: $routeManager.routes){
             TabView(selection: $selection){
