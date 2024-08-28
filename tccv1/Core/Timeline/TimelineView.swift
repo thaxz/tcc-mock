@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-// TODO: doc
+// TODO: doc && filter by year
 struct TimelineView: View {
     @EnvironmentObject private var routerManager: NavigationRouter
-    @ObservedObject var viewModel = TimelineViewModel()
+    @StateObject private var viewModel = TimelineViewModel()
     var body: some View {
         ScrollView{
             VStack(spacing: 24){

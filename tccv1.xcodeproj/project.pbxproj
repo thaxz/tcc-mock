@@ -29,6 +29,8 @@
 		E9D4686C2C6ED6B50054F902 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D4686B2C6ED6B50054F902 /* PreviewProvider.swift */; };
 		E9D4686F2C6ED9410054F902 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D4686E2C6ED9410054F902 /* HomeView.swift */; };
 		E9D468722C6ED9F20054F902 /* MockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D468712C6ED9F20054F902 /* MockButton.swift */; };
+		E9E22FFE2C7E979500ED5810 /* GalleryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E22FFD2C7E979500ED5810 /* GalleryCard.swift */; };
+		E9E230002C7E9EFF00ED5810 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E22FFF2C7E9EFF00ED5810 /* GalleryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		E9D4686B2C6ED6B50054F902 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		E9D4686E2C6ED9410054F902 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E9D468712C6ED9F20054F902 /* MockButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockButton.swift; sourceTree = "<group>"; };
+		E9E22FFD2C7E979500ED5810 /* GalleryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCard.swift; sourceTree = "<group>"; };
+		E9E22FFF2C7E9EFF00ED5810 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				E9D468562C6ED2370054F902 /* GalleryView.swift */,
+				E9E22FFF2C7E9EFF00ED5810 /* GalleryViewModel.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 			children = (
 				E96E72C92C76B674000B05BA /* TimelineRow.swift */,
 				E9D468712C6ED9F20054F902 /* MockButton.swift */,
+				E9E22FFD2C7E979500ED5810 /* GalleryCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -293,6 +299,8 @@
 				E9D4685D2C6ED2B40054F902 /* MapView.swift in Sources */,
 				E96E72D52C76C594000B05BA /* TabItens.swift in Sources */,
 				E9D4686F2C6ED9410054F902 /* HomeView.swift in Sources */,
+				E9E22FFE2C7E979500ED5810 /* GalleryCard.swift in Sources */,
+				E9E230002C7E9EFF00ED5810 /* GalleryViewModel.swift in Sources */,
 				E9D468672C6ED43D0054F902 /* NavigationManager.swift in Sources */,
 				E9D4685A2C6ED26A0054F902 /* TimelineView.swift in Sources */,
 				E96E72D32C76C001000B05BA /* TimelineViewModel.swift in Sources */,

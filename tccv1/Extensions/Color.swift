@@ -14,7 +14,7 @@ extension Color {
 
 struct ColorTheme {
     
-    let label = Color("labelColor")
+    let label = Color("customLabelColor")
     let subtitle = Color("subtitleColor")
     let background = Color("backgroundColor")
     let rowBg = Color("rowBackgroundColor")

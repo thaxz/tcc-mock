@@ -8,18 +8,25 @@
 import SwiftUI
 
 struct GalleryView: View {
+    
     @EnvironmentObject private var routerManager: NavigationRouter
+    @StateObject private var viewModel: GalleryViewModel = GalleryViewModel()
+    
     var body: some View {
-        VStack {
-            MockButton(text: "Push view mapa") {
-                routerManager.push(to: .mapView)
+        ScrollView {
+            VStack(spacing: 20){
+                ForEach(viewModel.constructions){ construction in
+                    GalleryCard(construction: construction)
+                }
             }
+            .padding(20)
         }
-        .padding(32)
         .navigationTitle("Construções")
     }
 }
 
 #Preview {
-    GalleryView()
+    NavigationStack{
+        GalleryView()
+    }
 }
