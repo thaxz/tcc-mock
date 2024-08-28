@@ -11,7 +11,7 @@ struct GalleryCard: View {
     let construction: Construction
     var body: some View {
         VStack(spacing: 0){
-            Image(construction.imageName)
+            Image(construction.imageNames.first ?? "unavailableImg")
                 .resizable()
                 .frame(height: 160)
                 .cornerRadius(8, corners: [.topLeft, .topRight])

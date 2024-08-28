@@ -26,7 +26,7 @@ extension Route: View {
         case .galleryView:
             GalleryView()
         case .detailView(let construction):
-            DetailView()
+            DetailView(construction: construction)
         case .timelineView:
             TimelineView()
         case .mapView:

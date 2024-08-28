@@ -8,11 +8,33 @@
 import SwiftUI
 
 struct DetailView: View {
+    let construction: Construction
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(){
+            VStack(spacing: 20){
+                ImageScroller(imageNames: construction.imageNames)
+                ZStack(alignment: .topLeading){
+                    RoundedRectangle(cornerRadius: 8)
+                        .foregroundStyle(Color.theme.background)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.theme.stroke, lineWidth: 2)
+                        )
+                    VStack(spacing: 12) {
+                        
+                    }
+                }
+                .frame(minHeight: 260)
+            }
+            .padding(.horizontal, 16)
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .scrollIndicators(.hidden)
     }
 }
 
-#Preview {
-    DetailView()
+struct DetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        DetailView(construction: dev.mockConstruction)
+    }
 }

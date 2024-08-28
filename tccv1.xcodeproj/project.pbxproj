@@ -31,6 +31,7 @@
 		E9D468722C6ED9F20054F902 /* MockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D468712C6ED9F20054F902 /* MockButton.swift */; };
 		E9E22FFE2C7E979500ED5810 /* GalleryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E22FFD2C7E979500ED5810 /* GalleryCard.swift */; };
 		E9E230002C7E9EFF00ED5810 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E22FFF2C7E9EFF00ED5810 /* GalleryViewModel.swift */; };
+		E9E230022C7EA6B300ED5810 /* ImageScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E230012C7EA6B300ED5810 /* ImageScroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		E9D468712C6ED9F20054F902 /* MockButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockButton.swift; sourceTree = "<group>"; };
 		E9E22FFD2C7E979500ED5810 /* GalleryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCard.swift; sourceTree = "<group>"; };
 		E9E22FFF2C7E9EFF00ED5810 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		E9E230012C7EA6B300ED5810 /* ImageScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				E9D468462C6ED1920054F902 /* tccv1App.swift */,
-				E9D468542C6ED20F0054F902 /* Core */,
 				E9D468612C6ED3410054F902 /* Models */,
 				E9D468652C6ED4080054F902 /* Managers */,
+				E9D468542C6ED20F0054F902 /* Core */,
 				E96E72CD2C76BED1000B05BA /* Utilities */,
 				E9D4686A2C6ED6950054F902 /* Extensions */,
 				E9D4684A2C6ED1940054F902 /* Assets.xcassets */,
@@ -219,6 +221,7 @@
 				E96E72C92C76B674000B05BA /* TimelineRow.swift */,
 				E9D468712C6ED9F20054F902 /* MockButton.swift */,
 				E9E22FFD2C7E979500ED5810 /* GalleryCard.swift */,
+				E9E230012C7EA6B300ED5810 /* ImageScroller.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				E9D468472C6ED1920054F902 /* tccv1App.swift in Sources */,
 				E9D4685D2C6ED2B40054F902 /* MapView.swift in Sources */,
 				E96E72D52C76C594000B05BA /* TabItens.swift in Sources */,
+				E9E230022C7EA6B300ED5810 /* ImageScroller.swift in Sources */,
 				E9D4686F2C6ED9410054F902 /* HomeView.swift in Sources */,
 				E9E22FFE2C7E979500ED5810 /* GalleryCard.swift in Sources */,
 				E9E230002C7E9EFF00ED5810 /* GalleryViewModel.swift in Sources */,

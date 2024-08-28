@@ -21,7 +21,7 @@ class DeveloperPreview {
     
     let mockConstruction = Construction(
         name: "Cornelia Street",
-        imageName: "mockImg2",
+        imageNames: ["mockImg2", "mockImg", "mockImg2", "mockImg"],
         description: "We were in the backseat, drunk on something stronger than the drinks in the bar. I rent a place on Cornelia Street, I say casually in the car. We were a blank page on the desk, filling in the blanks as we went, as if the street lights formed an arrow, leading us home. And I hope I never lose you, hope it never ends, because I would never walk Cornelia Street again. That's the kind of heartbreak time could never mend.",
         categories: ["Religious", "Sad"]
     )

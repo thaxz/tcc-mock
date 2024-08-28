@@ -17,6 +17,9 @@ struct GalleryView: View {
             VStack(spacing: 20){
                 ForEach(viewModel.constructions){ construction in
                     GalleryCard(construction: construction)
+                        .onTapGesture {
+                            routerManager.push(to: .detailView(construction: construction))
+                        }
                 }
             }
             .padding(20)

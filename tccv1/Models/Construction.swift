@@ -11,7 +11,7 @@ import Foundation
 struct Construction: Identifiable {
     
     let name: String
-    let imageName: String
+    let imageNames: [String]
     let description: String
     let categories: [String]
     
