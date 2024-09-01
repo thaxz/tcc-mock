@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import MapKit
 
 //TODO: DOC
 extension PreviewProvider {
@@ -23,7 +24,9 @@ class DeveloperPreview {
         name: "Cornelia Street",
         imageNames: ["mockImg2", "mockImg", "mockImg2", "mockImg"],
         description: "We were in the backseat, drunk on something stronger than the drinks in the bar. I rent a place on Cornelia Street, I say casually in the car. We were a blank page on the desk, filling in the blanks as we went, as if the street lights formed an arrow, leading us home. And I hope I never lose you, hope it never ends, because I would never walk Cornelia Street again. That's the kind of heartbreak time could never mend.",
-        categories: ["Religious", "Sad"]
+        history: "vem aí ",
+        categories: ["Religious", "Sad"],
+        coordinates: CLLocationCoordinate2D(latitude: 40.7316017, longitude: -74.0019679)
     )
     let mockEvent = TimelineEvent(title: "Construção da Igreja de São Pedro",
                                   date: "12/13/1989", headerImage: "mockImg")

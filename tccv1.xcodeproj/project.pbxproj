@@ -32,6 +32,12 @@
 		E9E22FFE2C7E979500ED5810 /* GalleryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E22FFD2C7E979500ED5810 /* GalleryCard.swift */; };
 		E9E230002C7E9EFF00ED5810 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E22FFF2C7E9EFF00ED5810 /* GalleryViewModel.swift */; };
 		E9E230022C7EA6B300ED5810 /* ImageScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E230012C7EA6B300ED5810 /* ImageScroller.swift */; };
+		E9F60ADD2C84ABEF0063F73E /* TypeOfButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F60ADC2C84ABEF0063F73E /* TypeOfButton.swift */; };
+		E9F60ADF2C84AC070063F73E /* ConstructionsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F60ADE2C84AC070063F73E /* ConstructionsDataService.swift */; };
+		E9F60AE12C84AC2B0063F73E /* LocationPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F60AE02C84AC2B0063F73E /* LocationPreview.swift */; };
+		E9F60AE32C84AC480063F73E /* SmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F60AE22C84AC480063F73E /* SmallButton.swift */; };
+		E9F60AE52C84AC8C0063F73E /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F60AE42C84AC8C0063F73E /* MapAnnotation.swift */; };
+		E9F60AE72C84ACA20063F73E /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F60AE62C84ACA20063F73E /* MapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +67,12 @@
 		E9E22FFD2C7E979500ED5810 /* GalleryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCard.swift; sourceTree = "<group>"; };
 		E9E22FFF2C7E9EFF00ED5810 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		E9E230012C7EA6B300ED5810 /* ImageScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScroller.swift; sourceTree = "<group>"; };
+		E9F60ADC2C84ABEF0063F73E /* TypeOfButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfButton.swift; sourceTree = "<group>"; };
+		E9F60ADE2C84AC070063F73E /* ConstructionsDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructionsDataService.swift; sourceTree = "<group>"; };
+		E9F60AE02C84AC2B0063F73E /* LocationPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreview.swift; sourceTree = "<group>"; };
+		E9F60AE22C84AC480063F73E /* SmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButton.swift; sourceTree = "<group>"; };
+		E9F60AE42C84AC8C0063F73E /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		E9F60AE62C84ACA20063F73E /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +152,7 @@
 			children = (
 				E9D468562C6ED2370054F902 /* GalleryView.swift */,
 				E9E22FFF2C7E9EFF00ED5810 /* GalleryViewModel.swift */,
+				E9E22FFD2C7E979500ED5810 /* GalleryCard.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -157,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				E9D4685C2C6ED2B40054F902 /* MapView.swift */,
+				E9F60AE42C84AC8C0063F73E /* MapAnnotation.swift */,
+				E9F60AE62C84ACA20063F73E /* MapViewModel.swift */,
 			);
 			path = Locations;
 			sourceTree = "<group>";
@@ -185,6 +200,7 @@
 			children = (
 				E9D468632C6ED4020054F902 /* Route.swift */,
 				E96E72D42C76C594000B05BA /* TabItens.swift */,
+				E9F60ADC2C84ABEF0063F73E /* TypeOfButton.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -193,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				E9D468662C6ED43D0054F902 /* NavigationManager.swift */,
+				E9F60ADE2C84AC070063F73E /* ConstructionsDataService.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -220,8 +237,9 @@
 			children = (
 				E96E72C92C76B674000B05BA /* TimelineRow.swift */,
 				E9D468712C6ED9F20054F902 /* MockButton.swift */,
-				E9E22FFD2C7E979500ED5810 /* GalleryCard.swift */,
 				E9E230012C7EA6B300ED5810 /* ImageScroller.swift */,
+				E9F60AE02C84AC2B0063F73E /* LocationPreview.swift */,
+				E9F60AE22C84AC480063F73E /* SmallButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -300,6 +318,7 @@
 				E9D468692C6ED4C70054F902 /* Construction.swift in Sources */,
 				E9D468472C6ED1920054F902 /* tccv1App.swift in Sources */,
 				E9D4685D2C6ED2B40054F902 /* MapView.swift in Sources */,
+				E9F60ADF2C84AC070063F73E /* ConstructionsDataService.swift in Sources */,
 				E96E72D52C76C594000B05BA /* TabItens.swift in Sources */,
 				E9E230022C7EA6B300ED5810 /* ImageScroller.swift in Sources */,
 				E9D4686F2C6ED9410054F902 /* HomeView.swift in Sources */,
@@ -308,13 +327,18 @@
 				E9D468672C6ED43D0054F902 /* NavigationManager.swift in Sources */,
 				E9D4685A2C6ED26A0054F902 /* TimelineView.swift in Sources */,
 				E96E72D32C76C001000B05BA /* TimelineViewModel.swift in Sources */,
+				E9F60AE12C84AC2B0063F73E /* LocationPreview.swift in Sources */,
 				E9D468642C6ED4020054F902 /* Route.swift in Sources */,
 				E9AEB5322C741A1A0084A54E /* TimelineSection.swift in Sources */,
 				E96E72D12C76BF06000B05BA /* EdgeBorder.swift in Sources */,
+				E9F60AE72C84ACA20063F73E /* MapViewModel.swift in Sources */,
 				E96E72D72C76C9CA000B05BA /* RoundedCorner.swift in Sources */,
+				E9F60ADD2C84ABEF0063F73E /* TypeOfButton.swift in Sources */,
 				E96E72CC2C76B90E000B05BA /* Color.swift in Sources */,
 				E9D468722C6ED9F20054F902 /* MockButton.swift in Sources */,
+				E9F60AE32C84AC480063F73E /* SmallButton.swift in Sources */,
 				E9D468602C6ED2E10054F902 /* DetailView.swift in Sources */,
+				E9F60AE52C84AC8C0063F73E /* MapAnnotation.swift in Sources */,
 				E9D4686C2C6ED6B50054F902 /* PreviewProvider.swift in Sources */,
 				E96E72CA2C76B674000B05BA /* TimelineRow.swift in Sources */,
 				E9D468572C6ED2370054F902 /* GalleryView.swift in Sources */,
