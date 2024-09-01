@@ -15,26 +15,36 @@ struct MapView: View {
         ZStack(alignment: .bottom){
             Map(position: $viewModel.position){
                 ForEach(viewModel.constructions){ construction in
-                    Annotation("Não sei", coordinate: construction.coordinates, anchor: .bottom) {
+                    Annotation(construction.name, coordinate: construction.coordinates,
+                               anchor: .bottom) {
                         MapAnnotationView()
                             .scaleEffect(construction == viewModel.selectedConstruction ? 1.4 : 1.0)
                             .animation(.bouncy(duration: 0.5, extraBounce: 0.2),
                                        value: construction == viewModel.selectedConstruction)
                             .onTapGesture {
                                 viewModel.selectedConstruction = construction
-                                //viewModel.position = construction.coordinates
-
+                                viewModel.updateMapRegion(construction: construction)
                             }
                     }
                 }
             }
             if viewModel.selectedConstruction != nil {
-                LocationPreview(construction: viewModel.selectedConstruction!) {
-                    
-                } seeDetails: {
-                    routerManager.push(to: .detailView(construction: viewModel.selectedConstruction!))
-                    print("to dando push")
+                ZStack(alignment: .topTrailing){
+                    LocationPreview(construction: viewModel.selectedConstruction!) {
+                        //todo: routea
+                    } seeDetails: {
+                        routerManager.push(to: .detailView(construction: viewModel.selectedConstruction!))
+                    }
+                    Image(systemName: "xmark.circle.fill")
+                        .resizable()
+                        .foregroundStyle(Color.black)
+                        .frame(width: 30, height: 30)
+                        .padding(20)
+                        .onTapGesture {
+                            viewModel.selectedConstruction = nil
+                        }
                 }
+                .padding()
             }
         }
     }
