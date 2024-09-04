@@ -34,7 +34,7 @@ extension MapView {
             ForEach(viewModel.constructions){ construction in
                 Annotation(construction.name, coordinate: construction.coordinates,
                            anchor: .bottom) {
-                    MapAnnotationView()
+                    MapAnnotationView(color: .black)
                         .scaleEffect(construction == viewModel.selectedConstruction ? 1.4 : 1.0)
                         .animation(.bouncy(duration: 0.5, extraBounce: 0.2),
                                    value: construction == viewModel.selectedConstruction)

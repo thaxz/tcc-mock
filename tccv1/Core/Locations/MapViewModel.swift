@@ -15,17 +15,15 @@ final class MapViewModel: ObservableObject {
     @Published var selectedConstruction: Construction?
     @Published var position: MapCameraPosition = .automatic
     
-    let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-    
     init() {
         self.constructions = ConstructionsDataService.constructions
     }
     
     func updateMapRegion(construction: Construction) {
+        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
         withAnimation(.easeInOut) {
             position = .region(MKCoordinateRegion(
-                center: construction.coordinates,
-                span: mapSpan))
+                center: construction.coordinates, span: span))
         }
     }
     

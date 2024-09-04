@@ -16,13 +16,14 @@ struct DetailView: View {
         self.construction = construction
         self.position = .region(MKCoordinateRegion(
             center: construction.coordinates,
-            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)))
+            span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)))
     }
     
     var body: some View {
         ScrollView(){
             VStack(alignment: .leading, spacing: 20){
                 ImageScroller(imageNames: construction.imageNames)
+                    .padding(.top, 16)
                 ZStack(alignment: .topLeading){
                     RoundedRectangle(cornerRadius: 8)
                         .foregroundStyle(Color.theme.background)
@@ -101,12 +102,12 @@ extension DetailView {
     }
     
     var mapSection: some View {
-        // valor constante pq a coordenada será fixa, a da localizacão da tela
         Map(position: $position) {
             Annotation(construction.name, coordinate: construction.coordinates) {
-                MapAnnotationView()
+                MapAnnotationView(color: .blue)
             }
         }
+        .mapStyle(.imagery(elevation: .realistic))
         .allowsHitTesting(false)
         .frame(height: 150)
         .cornerRadius(8)

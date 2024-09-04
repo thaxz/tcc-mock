@@ -10,22 +10,25 @@ import SwiftUI
 //TODO: Organize && doc
 struct HomeView: View {
     @StateObject private var routeManager = NavigationRouter()
-    @State var selection: TabItens = .gallery
+    @State var selection: TabItens = .timeline
     var body: some View {
         NavigationStack(path: $routeManager.routes){
             TabView(selection: $selection){
                 TimelineView()
                     .tabItem {
                         Label("Timeline", systemImage: "clock")
-                    }.tag(TabItens.timeline)
+                    }
+                    .tag(TabItens.timeline)
                 GalleryView()
                     .tabItem {
                         Label("Construções", systemImage: "building.columns.fill")
-                    }.tag(TabItens.gallery)
+                    }
+                    .tag(TabItens.gallery)
                 MapView()
                     .tabItem {
                         Label("Mapa", systemImage: "map.fill")
-                    }.tag(TabItens.map)
+                    }
+                    .tag(TabItens.map)
                 
             }
             .navigationTitle(selection == .timeline ? "Timeline" :

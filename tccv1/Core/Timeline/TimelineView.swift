@@ -31,17 +31,14 @@ struct TimelineView: View {
 extension TimelineView {
     
     func headerSection(year: String) -> some View {
-        ZStack(alignment: .leading){
-            Rectangle()
-                .foregroundStyle(Color.theme.rowBg)
-                .cornerRadius(8, corners: [.topLeft, .topRight])
-                .border(width: 2, edges: [.bottom], color: .theme.stroke)
+        VStack(alignment: .leading, spacing: 2){
             Text(year)
                 .font(.system(size: 20, weight: .semibold))
                 .foregroundStyle(Color.theme.label)
-                .padding(.leading, 8)
+            Rectangle()
+                .frame(height: 2)
+                .foregroundStyle(Color.theme.stroke)
         }
-        .frame(height: 40)
     }
 }
 
