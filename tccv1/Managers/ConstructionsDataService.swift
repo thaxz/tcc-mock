@@ -28,6 +28,15 @@ final class ConstructionsDataService {
             coordinates: CLLocationCoordinate2D(latitude: 40.57227221410652,
                                                 longitude: -73.97931775204917)
         ),
+        Construction(
+            name: "Shopping Recife",
+            imageNames: ["mockImg2", "mockImg", "mockImg"],
+            description: "O Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dosO Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dos",
+            history: "O Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dosO Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dos",
+            categories: ["Shopping", "Recife"],
+            coordinates: CLLocationCoordinate2D(latitude: -8.11847204948651,
+                                                longitude: -34.904840561374726) 
+        ),
     ]
     
 }

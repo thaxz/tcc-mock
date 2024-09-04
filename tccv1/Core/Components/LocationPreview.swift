@@ -15,32 +15,22 @@ struct LocationPreview: View {
         ZStack(alignment: .topLeading){
             RoundedRectangle(cornerRadius: 15)
                 .foregroundStyle(Color.theme.background)
-                .frame(height: 250)
-            VStack(alignment: .leading, spacing: 16){
-                Image(construction.imageNames.first ?? "mockImg1")
-                    .frame(height: 80)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                HStack {
-                    Text(construction.name)
-                        .foregroundStyle(Color.theme.label)
-                        .font(.system(size: 16, weight: .semibold))
-                    Spacer()
-                    Text(construction.categories.first ?? "Recife")
-                        .foregroundStyle(Color.theme.darkBlue)
+            VStack(alignment: .leading){
+                HStack(spacing: 16){
+                    Image(construction.imageNames.first ?? "mockImg1")
+                        .frame(width: 80, height: 80)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                    VStack(alignment: .leading ,spacing: 8){
+                        Text(construction.name)
+                            .foregroundStyle(Color.theme.label)
+                            .font(.system(size: 16, weight: .semibold))
+                        
+                    Text(construction.description)
+                        .lineLimit(2)
+                        .foregroundStyle(Color.theme.subtitle)
                         .font(.system(size: 12, weight: .regular))
-                        .padding(.vertical, 6)
-                        .padding(.horizontal, 8)
-                        .background(
-                            RoundedRectangle(cornerRadius: 20)
-                                .foregroundStyle(Color.theme.lightBlue)
-                                .frame(height: 25)
-
-                        )
+                    }
                 }
-                Text(construction.description)
-                    .lineLimit(2)
-                    .foregroundStyle(Color.theme.subtitle)
-                    .font(.system(size: 12, weight: .regular))
                 HStack(spacing: 16){
                     SmallButton(title: "Ver Rotas", type: .secondary) {
                         seeRoutes()
@@ -49,9 +39,12 @@ struct LocationPreview: View {
                        seeDetails()
                     }
                 }
+                .padding(.top, 8)
             }
             .padding(16)
         }
+        .padding(.horizontal, 16)
+        .frame(height: 170)
     }
 }
 
