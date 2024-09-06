@@ -36,7 +36,7 @@ extension Route: View {
         case .galleryView:
             GalleryView()
         case .imageDetail(let galleryPhoto):
-            ImageDetailView()
+            ImageDetailView(photo: galleryPhoto)
         }
     }
 }
