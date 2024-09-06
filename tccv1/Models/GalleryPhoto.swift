@@ -7,10 +7,14 @@
 
 import Foundation
 
-struct GalleryPhoto {
+struct GalleryPhoto: Identifiable {
     
     let imageName: String
     let title: String
     let subtitle: String
+    
+    var id: String {
+        title + imageName
+    }
     
 }

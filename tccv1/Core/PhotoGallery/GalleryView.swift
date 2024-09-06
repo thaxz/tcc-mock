@@ -7,13 +7,24 @@
 
 import SwiftUI
 
-//todo
 struct GalleryView: View {
+    
+    @EnvironmentObject private var routerManager: NavigationRouter
+    @StateObject var viewModel: GalleryViewModel = GalleryViewModel()
+    
     var body: some View {
-        ZStack {
-            Color.theme.background
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        }
+        ScrollView{
+            LazyVGrid(columns: viewModel.columns, spacing: 16) {
+                ForEach(viewModel.photos) { photo in
+                    ImageCard(galleryPhoto: photo)
+                        .onTapGesture {
+                            routerManager.push(to: .imageDetail(galleryPhoto: photo))
+                        }
+                }
+            }
+        } 
+        .scrollIndicators(.hidden)
+        .padding()
     }
 }
 

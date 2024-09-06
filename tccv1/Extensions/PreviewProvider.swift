@@ -30,4 +30,6 @@ class DeveloperPreview {
     )
     let mockEvent = TimelineEvent(title: "Construção da Igreja de São Pedro",
                                   date: "12/13/1989", headerImage: "mockImg")
+    
+    let mockGalleryPhoto = GalleryPhoto(imageName: "mockNew", title: "Parque da Jaqueira", subtitle: "É o parque da jaqueira em alguma época")
 }

@@ -14,9 +14,9 @@ struct HomeView: View {
     var body: some View {
         NavigationStack(path: $routeManager.routes){
             TabView(selection: $selection){
-                TimelineView()
+                GalleryView()
                     .tabItem {
-                        Label("Timeline", systemImage: "clock")
+                        Label("Galeria", systemImage: "photo")
                     }
                     .tag(TabItens.timeline)
                 ConstructionsView()
@@ -31,7 +31,7 @@ struct HomeView: View {
                     .tag(TabItens.map)
                 
             }
-            .navigationTitle(selection == .timeline ? "Timeline" :
+            .navigationTitle(selection == .timeline ? "Galeria" :
                                 selection == .gallery ? "Construções" : "Mapa")
             .navigationDestination(for: Route.self) { route in
                 route
