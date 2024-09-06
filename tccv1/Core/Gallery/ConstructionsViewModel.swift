@@ -9,7 +9,7 @@ import Foundation
 
 //TODO: logic && doc
 @MainActor
-final class GalleryViewModel: ObservableObject {
+final class ConstructionsViewModel: ObservableObject {
     
     @Published var constructions: [Construction] = []
     

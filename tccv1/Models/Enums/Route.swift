@@ -24,7 +24,7 @@ extension Route: View {
     var body: some View {
         switch self {
         case .galleryView:
-            GalleryView()
+            ConstructionsView()
         case .detailView(let construction):
             DetailView(construction: construction)
         case .timelineView:

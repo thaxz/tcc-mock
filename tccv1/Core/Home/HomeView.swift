@@ -19,7 +19,7 @@ struct HomeView: View {
                         Label("Timeline", systemImage: "clock")
                     }
                     .tag(TabItens.timeline)
-                GalleryView()
+                ConstructionsView()
                     .tabItem {
                         Label("Construções", systemImage: "building.columns.fill")
                     }

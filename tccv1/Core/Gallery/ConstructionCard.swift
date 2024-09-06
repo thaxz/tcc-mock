@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct GalleryCard: View {
+struct ConstructionCard: View {
     let construction: Construction
     var body: some View {
         VStack(spacing: 0){
             Image(construction.imageNames.first ?? "unavailableImg")
                 .resizable()
-                .frame(height: 160)
+                .frame(height: 180)
                 .cornerRadius(8, corners: [.topLeft, .topRight])
             ZStack(alignment: .topLeading){
                 Rectangle()
@@ -25,21 +25,21 @@ struct GalleryCard: View {
                         .foregroundStyle(Color.theme.label)
                         .font(.system(size: 16, weight: .semibold))
                     Text(construction.description)
-                        .foregroundStyle(Color.theme.subtitle)
+                        .foregroundStyle(Color.theme.label)
                         .font(.system(size: 12, weight: .regular))
-                        .lineSpacing(4)
-                        .lineLimit(4)
+                        .lineSpacing(5)
+                        .lineLimit(3)
                     categoriesSection
                 }
                 .padding([.horizontal, .top], 16)
             }
-            .frame(height: 170)
+            .frame(height: 160)
         }
         
     }
 }
 
-extension GalleryCard {
+extension ConstructionCard {
     
     var categoriesSection: some View {
         HStack{
@@ -65,7 +65,7 @@ extension GalleryCard {
 
 struct GalleryCard_Previews: PreviewProvider {
     static var previews: some View {
-        GalleryCard(construction: dev.mockConstruction)
+        ConstructionCard(construction: dev.mockConstruction)
             .padding(20)
     }
 }

@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct GalleryView: View {
+struct ConstructionsView: View {
     
     @EnvironmentObject private var routerManager: NavigationRouter
-    @StateObject private var viewModel: GalleryViewModel = GalleryViewModel()
+    @StateObject private var viewModel: ConstructionsViewModel = ConstructionsViewModel()
     
     var body: some View {
         ScrollView {
             VStack(spacing: 20){
                 ForEach(viewModel.constructions){ construction in
-                    GalleryCard(construction: construction)
+                    ConstructionCard(construction: construction)
                         .onTapGesture {
                             routerManager.push(to: .detailView(construction: construction))
                         }
@@ -30,6 +30,6 @@ struct GalleryView: View {
 
 #Preview {
     NavigationStack{
-        GalleryView()
+        ConstructionsView()
     }
 }

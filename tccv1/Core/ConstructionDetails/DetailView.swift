@@ -21,38 +21,38 @@ struct DetailView: View {
     
     var body: some View {
         ScrollView(){
+            ImageScroller(imageNames: construction.imageNames)
             VStack(alignment: .leading, spacing: 20){
-                ImageScroller(imageNames: construction.imageNames)
-                    .padding(.top, 16)
-                ZStack(alignment: .topLeading){
-                    RoundedRectangle(cornerRadius: 8)
-                        .foregroundStyle(Color.theme.background)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.theme.stroke, lineWidth: 2)
-                        )
-                    VStack(alignment: .leading, spacing: 16) {
-                        Text(construction.name)
-                            .font(.system(size: 24, weight: .bold))
-                            .foregroundStyle(Color.theme.label)
-                        Text(construction.description)
-                            .font(.system(size: 14, weight: .regular))
-                            .foregroundStyle(Color.theme.subtitle)
-                        Text("Tags")
-                            .font(.system(size: 16, weight: .semibold))
-                            .foregroundStyle(Color.theme.label)
-                        categoriesSection
-                    }
-                    .padding(16)
-                }
-                .frame(minHeight: 260)
+                Text(construction.name)
+                    .font(.system(size: 24, weight: .bold))
+                    .foregroundStyle(Color.theme.label)
+                    .lineLimit(2)
+                    .padding(.top, 8)
+                Text(construction.description)
+                    .font(.system(size: 14, weight: .regular))
+                    .foregroundStyle(Color.theme.label)
+                
                 historySection
+                Text("Tags")
+                    .font(.system(size: 24, weight: .bold))
+                    .foregroundStyle(Color.theme.label)
+                categoriesSection
+                Text("Atributos")
+                    .font(.system(size: 24, weight: .bold))
+                    .foregroundStyle(Color.theme.label)
+                Text("alguma hstack com atributos")
+                    .font(.system(size: 14, weight: .regular))
+                    .foregroundStyle(Color.theme.label)
+                
                 Text("Localização")
                     .font(.system(size: 24, weight: .bold))
+                    .foregroundStyle(Color.theme.label)
                 mapSection
             }
-            .padding(.horizontal, 16)
+            .padding(.horizontal, 20)
         }
+        .toolbarBackground(.hidden, for: .navigationBar)
+        .ignoresSafeArea(edges: .top)
         .navigationBarTitleDisplayMode(.inline)
         .scrollIndicators(.hidden)
     }
@@ -81,24 +81,14 @@ extension DetailView {
     }
     
     var historySection: some View {
-        ZStack(alignment: .topLeading){
-            RoundedRectangle(cornerRadius: 8)
-                .foregroundStyle(Color.theme.background)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color.theme.stroke, lineWidth: 2)
-                )
-            VStack(alignment: .leading, spacing: 16){
-                Text("História")
-                    .font(.system(size: 24, weight: .bold))
-                    .foregroundStyle(Color.theme.label)
-                Text(construction.history)
-                    .font(.system(size: 14, weight: .regular))
-                    .foregroundStyle(Color.theme.subtitle)
-            }
-            .padding(16)
+        VStack(alignment: .leading, spacing: 16){
+            Text("História")
+                .font(.system(size: 24, weight: .bold))
+                .foregroundStyle(Color.theme.label)
+            Text(construction.history)
+                .font(.system(size: 14, weight: .regular))
+                .foregroundStyle(Color.theme.label)
         }
-        .frame(minHeight: 260)
     }
     
     var mapSection: some View {

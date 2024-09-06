@@ -8,29 +8,24 @@
 import SwiftUI
 
 struct ImageScroller: View {
-    @State private var scrollPosition: Int? = nil
     let imageNames: [String]
     var body: some View {
-        ScrollView(.horizontal) {
-            HStack(spacing: 0) {
-                ForEach(imageNames, id: \.self) { imageName in
+        TabView {
+            ForEach(imageNames, id: \.self) { imageName in
                     Image(imageName)
                         .resizable()
-                        .frame(width: 300, height: 200)
-                        .cornerRadius(15)
-                        .padding(.horizontal, 8)
-                }
+                        .scaledToFill()
             }
         }
-        .scrollIndicators(.hidden)
-        .scrollTargetLayout()
-        .scrollTargetBehavior(.viewAligned)
-        .scrollBounceBehavior(.basedOnSize)
-        .scrollPosition(id: $scrollPosition, anchor: .center)
-        .animation(.smooth, value: scrollPosition)
+        .frame(height: 304)
+        .indexViewStyle(.page(backgroundDisplayMode: .always))
+        .tabViewStyle(.page(indexDisplayMode: .always))
     }
 }
 
 #Preview {
-    ImageScroller(imageNames: ["mockImg", "mockImg2"])
+    ZStack{
+        Color.black
+        ImageScroller(imageNames: ["mockImg", "mockImg2"])
+    }
 }
