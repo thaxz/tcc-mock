@@ -10,10 +10,12 @@ import SwiftUI
 
 enum Route {
     
-    case galleryView
+    case constructionView
     case detailView(construction: Construction)
     case timelineView
     case mapView
+    case galleryView
+    case imageDetail(galleryPhoto: GalleryPhoto)
     
 }
 
@@ -23,7 +25,7 @@ extension Route: View {
     /// A SwiftUI View representation of the current Route.
     var body: some View {
         switch self {
-        case .galleryView:
+        case .constructionView:
             ConstructionsView()
         case .detailView(let construction):
             DetailView(construction: construction)
@@ -31,6 +33,10 @@ extension Route: View {
             TimelineView()
         case .mapView:
             MapView()
+        case .galleryView:
+            GalleryView()
+        case .imageDetail(let galleryPhoto):
+            ImageDetailView()
         }
     }
 }
@@ -40,7 +46,7 @@ extension Route: Hashable {
     
     static func == (lhs: Route, rhs: Route) -> Bool {
         switch (lhs, rhs){
-        case (.galleryView, .galleryView):
+        case (.constructionView, .constructionView):
             return true
         case (.detailView(let lshItem), .detailView(let rhsItem)):
             return lshItem.name == rhsItem.name
@@ -48,6 +54,10 @@ extension Route: Hashable {
             return true
         case (.mapView, .mapView):
             return true
+        case (.galleryView, .galleryView):
+            return true
+        case (.imageDetail(let lshItem), .imageDetail(let rhsItem)):
+            return lshItem.imageName == rhsItem.imageName
         default:
             return false
         }
