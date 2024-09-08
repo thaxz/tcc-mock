@@ -36,10 +36,21 @@ final class ImageDetailViewModel: ObservableObject {
         offset = .zero
         lastOffset = .zero
     }
-
-    func updateDrag(gesture: DragGesture.Value) {
-        offset = CGSize(width: lastOffset.width + gesture.translation.width,
-                        height: lastOffset.height + gesture.translation.height)
+    
+    func updateDrag(gesture: DragGesture.Value, imageSize: CGSize, screenSize: CGSize) {
+        let newOffset = CGSize(width: lastOffset.width + gesture.translation.width,
+                               height: lastOffset.height + gesture.translation.height)
+        
+        let scaledImageWidth = imageSize.width * currentScale
+        let scaledImageHeight = imageSize.height * currentScale
+        
+        let maxXOffset = (scaledImageWidth - screenSize.width) / 2
+        let maxYOffset = (scaledImageHeight - screenSize.height) / 2
+        
+        offset = CGSize(
+            width: max(min(newOffset.width, maxXOffset), -maxXOffset),
+            height: max(min(newOffset.height, maxYOffset), -maxYOffset)
+        )
     }
     
     func endDrag() {
