@@ -7,39 +7,61 @@
 
 import SwiftUI
 
-//todo
 struct ImageDetailView: View {
     
-    @State var isZooming: Bool = false
+    @StateObject var viewModel: ImageDetailViewModel = ImageDetailViewModel()
+    
     let photo: GalleryPhoto
     
     var body: some View {
-        ZStack(alignment: .bottom){
+        ZStack(alignment: .bottom) {
             Color.theme.blackBg
-            VStack(){
+            VStack {
                 Spacer()
                 Image(photo.imageName)
                     .resizable()
                     .scaledToFit()
                     .padding(20)
+                    .scaleEffect(viewModel.isZooming ? viewModel.currentScale : 1.0)
+                    .offset(x: viewModel.offset.width, y: viewModel.offset.height)
+                    .gesture(
+                        viewModel.isZooming ?
+                        SimultaneousGesture(
+                            DragGesture()
+                                .onChanged { gesture in
+                                    viewModel.updateDrag(gesture: gesture)
+                                }
+                                .onEnded { _ in
+                                    viewModel.endDrag()
+                                },
+                            MagnificationGesture()
+                                .onChanged { scale in
+                                    viewModel.updateZoom(scale: scale)
+                                }
+                                .onEnded { _ in
+                                    viewModel.endZoom()
+                                }
+                        ) : nil
+                    )
                 Spacer()
                 HStack {
                     Spacer()
                     Button {
-                        isZooming.toggle()
+                        viewModel.toggleZoom()
                     } label: {
                         RoundedRectangle(cornerRadius: 8)
                             .frame(width: 48, height: 48)
                             .foregroundStyle(.white)
                             .overlay {
-                                Image(systemName: "plus.magnifyingglass")
-                                    .font(.title2)
-                                    .fontWeight(.semibold)
+                                Image(systemName: viewModel.isZooming ? "minus.magnifyingglass" :
+                                        "plus.magnifyingglass")
+                                .font(.title2)
+                                .fontWeight(.semibold)
                             }
                     }
                     .padding(20)
                 }
-                if !isZooming {
+                if !viewModel.isZooming {
                     ZStack(alignment: .topLeading){
                         Rectangle()
                             .frame(height: 170)
@@ -57,12 +79,12 @@ struct ImageDetailView: View {
                         .padding(20)
                         .padding(.top, 20)
                     }
-                    .offset(y: isZooming ? 200 : 0)
+                    .offset(y: viewModel.isZooming ? 200 : 0)
                     .transition(.move(edge: .bottom))
                 }
             }
         }
-        .animation(.bouncy, value: isZooming)
+        .animation(.bouncy, value: viewModel.isZooming)
         .ignoresSafeArea()
     }
 }
