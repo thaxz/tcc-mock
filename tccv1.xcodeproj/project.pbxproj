@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E93F188B2C8FC5A500219849 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93F188A2C8FC5A500219849 /* InfoView.swift */; };
 		E96E72CA2C76B674000B05BA /* TimelineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96E72C92C76B674000B05BA /* TimelineRow.swift */; };
 		E96E72CC2C76B90E000B05BA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96E72CB2C76B90E000B05BA /* Color.swift */; };
 		E96E72CF2C76BEE5000B05BA /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96E72CE2C76BEE5000B05BA /* View.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		E934B4C52C87E0C600367EC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E93F188A2C8FC5A500219849 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		E96E72C92C76B674000B05BA /* TimelineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineRow.swift; sourceTree = "<group>"; };
 		E96E72CB2C76B90E000B05BA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E96E72CE2C76BEE5000B05BA /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				E9D4686E2C6ED9410054F902 /* HomeView.swift */,
+				E93F188A2C8FC5A500219849 /* InfoView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				E9C8736D2C8A82A100322709 /* ImageDetailView.swift in Sources */,
 				E9D4685A2C6ED26A0054F902 /* TimelineView.swift in Sources */,
 				E986A9D62C8DF3CC006E1A60 /* ImageDetailViewModel.swift in Sources */,
+				E93F188B2C8FC5A500219849 /* InfoView.swift in Sources */,
 				E96E72D32C76C001000B05BA /* TimelineViewModel.swift in Sources */,
 				E9F60AE12C84AC2B0063F73E /* LocationPreview.swift in Sources */,
 				E9D083DF2C8A917100339FD7 /* ImageCard.swift in Sources */,

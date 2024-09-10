@@ -13,20 +13,36 @@ struct GalleryView: View {
     @StateObject var viewModel: GalleryViewModel = GalleryViewModel()
     
     var body: some View {
-        ScrollView{
-            LazyVGrid(columns: viewModel.columns, spacing: 16) {
-                ForEach(viewModel.photos) { photo in
-                    ImageCard(galleryPhoto: photo)
-                        .onTapGesture {
-                            routerManager.push(to: .imageDetail(galleryPhoto: photo))
-                        }
+        ZStack(alignment: .topTrailing){
+            ScrollView{
+                LazyVGrid(columns: viewModel.columns, spacing: 16) {
+                    ForEach(viewModel.photos) { photo in
+                        ImageCard(galleryPhoto: photo)
+                            .onTapGesture {
+                                routerManager.push(to: .imageDetail(galleryPhoto: photo))
+                            }
+                    }
                 }
             }
-        } 
-        .scrollIndicators(.hidden)
-        .padding()
+            .scrollIndicators(.hidden)
+            .padding()
+            Button {
+                routerManager.push(to: .infoView)
+            } label: {
+                RoundedRectangle(cornerRadius: 8)
+                    .foregroundStyle(Color.theme.background)
+                    .frame(width: 40 ,height: 40)
+                    .overlay {
+                        Image(systemName: "questionmark.circle.fill")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                    }
+            }
+            .padding(36)
+        }
     }
 }
+
 
 #Preview {
     GalleryView()

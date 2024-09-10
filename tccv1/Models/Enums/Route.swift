@@ -16,6 +16,7 @@ enum Route {
     case mapView
     case galleryView
     case imageDetail(galleryPhoto: GalleryPhoto)
+    case infoView
     
 }
 
@@ -37,6 +38,8 @@ extension Route: View {
             GalleryView()
         case .imageDetail(let galleryPhoto):
             ImageDetailView(photo: galleryPhoto)
+        case .infoView:
+            InfoView()
         }
     }
 }
