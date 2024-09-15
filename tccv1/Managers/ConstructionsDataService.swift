@@ -13,7 +13,7 @@ final class ConstructionsDataService {
     static let constructions = [
         Construction(
             name: "Palácio do Campo das Princesas",
-            imageNames: ["mockImg2", "mockImg", "mockImg"],
+            imageNames: ["princesac1", "princesac2", "princesac3"],
             description: "We were in the backseat, drunk on something stronger than the drinks in the bar. I rent a place on Cornelia Street, I say casually in the car. We were a blank page on the desk, filling in the blanks as we went, as if the street lights formed an arrow, leading us home. And I hope I never lose you, hope it never ends, because I would never walk Cornelia Street again. That's the kind of heartbreak time could never mend.",
             history: "ja escrevo",
             categories: ["Street", "Sad"],
@@ -22,7 +22,7 @@ final class ConstructionsDataService {
         ),
         Construction(
             name: "Teatro de Santa Isabel",
-            imageNames: ["mockImg2", "mockImg", "mockImg"],
+            imageNames: ["teatroc1", "teatroc2", "teatroc3", "teatroc4"],
             description: "I'm on a bench in Coney Island, wondering, where did my baby go? The fast times, the bright lights, the merry-go. Sorry for not making you my centerfold. Over and over, lost again with no surprises, disappointments close your eyes, and it gets colder and colder when the sun goes down. When the sun goes down, the sight that flashed before me was your face.",
             history: "ja escrevo",
             categories: ["Island", "Coney"],
@@ -31,7 +31,7 @@ final class ConstructionsDataService {
         ),
         Construction(
             name: "Basílica de Nossa Senhora do Carmo",
-            imageNames: ["mockImg2", "mockImg", "mockImg"],
+            imageNames: ["carmoC1", "carmoc2", "carmoC3"],
             description: "O Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dosO Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dos",
             history: "O Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dosO Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dos",
             categories: ["Shopping", "Recife"],
@@ -40,7 +40,7 @@ final class ConstructionsDataService {
         ),
         Construction(
             name: "Mercado de São José",
-            imageNames: ["mockImg2", "mockImg", "mockImg"],
+            imageNames: ["joseC1", "joseC2", "joseC3"],
             description: "O Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dosO Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dos",
             history: "O Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dosO Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dos",
             categories: ["Shopping", "Recife"],
@@ -49,7 +49,7 @@ final class ConstructionsDataService {
         ),
         Construction(
             name: "Forte das Cinco Pontas",
-            imageNames: ["mockImg2", "mockImg", "mockImg"],
+            imageNames: ["pontasC1", "pontasC2", "pontasC3"],
             description: "O Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dosO Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dos",
             history: "O Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dosO Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dos",
             categories: ["Shopping", "Recife"],
@@ -58,7 +58,7 @@ final class ConstructionsDataService {
         ),
         Construction(
             name: "Hospital Pedro II",
-            imageNames: ["mockImg2", "mockImg", "mockImg"],
+            imageNames: ["hospitalPedroC1", "hospitalPedroC2", "hospitalPedroC3"],
             description: "O Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dosO Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dos",
             history: "O Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dosO Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dos",
             categories: ["Shopping", "Recife"],
@@ -67,7 +67,7 @@ final class ConstructionsDataService {
         ),
         Construction(
             name: "Torre Malakoff",
-            imageNames: ["mockImg2", "mockImg", "mockImg"],
+            imageNames: ["torreMalakofC1", "torreMalakofC2", "torreMalakofC3"],
             description: "O Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dosO Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dos",
             history: "O Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dosO Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dos",
             categories: ["Shopping", "Recife"],
@@ -76,7 +76,7 @@ final class ConstructionsDataService {
         ),
         Construction(
             name: "Forte do Brum",
-            imageNames: ["mockImg2", "mockImg", "mockImg"],
+            imageNames: ["forteBrumC1", "forteBrumC2", "forteBrumC3"],
             description: "O Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dosO Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dos",
             history: "O Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dosO Plaza está localizado em Casa Forte, um dos mais tradicionais bairros da Zona Norte da cidade e atende a uma área de influência percebida como um dos",
             categories: ["Shopping", "Recife"],
