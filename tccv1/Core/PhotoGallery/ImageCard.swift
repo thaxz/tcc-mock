@@ -14,7 +14,9 @@ struct ImageCard: View {
         ZStack(alignment: .bottom){
             Image(galleryPhoto.imageName)
                 .resizable()
+                .cornerRadius(12)
             Rectangle()
+                .cornerRadius(12, corners: [.bottomRight, .bottomLeft])
                 .frame(height: 80)
                 .foregroundStyle(.black.opacity(0.6))
                 .overlay(alignment: .leading){
