@@ -13,7 +13,9 @@ struct ConstructionCard: View {
         VStack(spacing: 0){
             Image(construction.imageNames.first ?? "unavailableImg")
                 .resizable()
-                .scaledToFit()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 350, height: 180)
+                .clipped()
                 .cornerRadius(8, corners: [.topLeft, .topRight])
             ZStack(alignment: .topLeading){
                 Rectangle()

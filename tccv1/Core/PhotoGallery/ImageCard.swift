@@ -14,7 +14,10 @@ struct ImageCard: View {
         ZStack(alignment: .bottom){
             Image(galleryPhoto.imageName)
                 .resizable()
-                .cornerRadius(12)
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 170, height: 240)
+                .clipped()
+                .cornerRadius(12, corners: .allCorners)
             Rectangle()
                 .cornerRadius(12, corners: [.bottomRight, .bottomLeft])
                 .frame(height: 80)
@@ -26,9 +29,8 @@ struct ImageCard: View {
                         .lineLimit(2)
                         .padding(.horizontal, 8)
                 }
-            
         }
-        .frame(width: 170, height: 240)
+        .frame(width: 170)
     }
 }
 

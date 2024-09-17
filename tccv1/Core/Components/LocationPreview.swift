@@ -18,17 +18,20 @@ struct LocationPreview: View {
             VStack(alignment: .leading){
                 HStack(spacing: 16){
                     Image(construction.imageNames.first ?? "mockImg1")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
                         .frame(width: 80, height: 80)
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                        .clipped()
+                        .cornerRadius(8, corners: .allCorners)
                     VStack(alignment: .leading ,spacing: 8){
                         Text(construction.name)
                             .foregroundStyle(Color.theme.label)
                             .font(.system(size: 16, weight: .semibold))
                         
-                    Text(construction.description)
-                        .lineLimit(2)
-                        .foregroundStyle(Color.theme.subtitle)
-                        .font(.system(size: 12, weight: .regular))
+                        Text(construction.description)
+                            .lineLimit(2)
+                            .foregroundStyle(Color.theme.subtitle)
+                            .font(.system(size: 12, weight: .regular))
                     }
                 }
                 HStack(spacing: 16){
@@ -36,7 +39,7 @@ struct LocationPreview: View {
                         seeRoutes()
                     }
                     SmallButton(title: "Ver Detalhes", type: .primary) {
-                       seeDetails()
+                        seeDetails()
                     }
                 }
                 .padding(.top, 8)

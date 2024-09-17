@@ -25,7 +25,8 @@ struct GalleryView: View {
                 }
             }
             .scrollIndicators(.hidden)
-            .padding()
+            .padding(.horizontal)
+            .padding(.top)
             Button {
                 routerManager.push(to: .infoView)
             } label: {
