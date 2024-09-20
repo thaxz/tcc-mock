@@ -18,6 +18,7 @@ struct ImageCard: View {
                 .frame(width: 170, height: 240)
                 .clipped()
                 .cornerRadius(12, corners: .allCorners)
+                .contentShape(Rectangle())
             Rectangle()
                 .cornerRadius(12, corners: [.bottomRight, .bottomLeft])
                 .frame(height: 80)

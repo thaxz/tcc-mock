@@ -37,12 +37,12 @@ struct DetailView: View {
                     .font(.system(size: 24, weight: .bold))
                     .foregroundStyle(Color.theme.label)
                 categoriesSection
-                Text("Atributos")
-                    .font(.system(size: 24, weight: .bold))
-                    .foregroundStyle(Color.theme.label)
-                Text("alguma hstack com atributos")
-                    .font(.system(size: 14, weight: .regular))
-                    .foregroundStyle(Color.theme.label)
+//                Text("Atributos")
+//                    .font(.system(size: 24, weight: .bold))
+//                    .foregroundStyle(Color.theme.label)
+//                Text("alguma hstack com atributos")
+//                    .font(.system(size: 14, weight: .regular))
+//                    .foregroundStyle(Color.theme.label)
                 
                 Text("Localização")
                     .font(.system(size: 24, weight: .bold))
