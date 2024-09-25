@@ -33,11 +33,10 @@ final class MapViewModel: ObservableObject {
     }
     
     func resetMapPosition() {
-        withAnimation(.easeInOut) {
+        withAnimation(.easeInOut(duration: 1.5)) { 
             mapRegion = MKCoordinateRegion(center: initialLocation, span: defaultSpan)
         }
     }
-
     
     func redirectTo(construction: Construction) {
         let url = URL(string: "maps://?saddr=&daddr=\(construction.coordinates.latitude),\(construction.coordinates.longitude)")
