@@ -12,38 +12,26 @@ struct MapView: View {
     
     @EnvironmentObject private var routerManager: NavigationRouter
     @StateObject var viewModel: MapViewModel = MapViewModel()
-    @State private var triggerMapAnimation: Bool = false
     
     var body: some View {
-        ZStack(alignment: .bottom){
-            mapSection
+        ZStack(alignment: .bottom) {
+            mapLayer
             locationSection
             if viewModel.selectedConstruction != nil {
                 previewSection
                     .transition(.opacity)
             }
         }
-        .animation(.easeOut(duration: 1), value: triggerMapAnimation)
     }
-}
-
-extension MapView {
     
-    var mapSection: some View {
-        Map(position: $viewModel.position){
-            ForEach(viewModel.constructions){ construction in
-                Annotation(construction.name, coordinate: construction.coordinates,
-                           anchor: .bottom) {
-                    MapAnnotationView(color: .black)
-                        .scaleEffect(construction == viewModel.selectedConstruction ? 1.4 : 1.0)
-                        .animation(.bouncy(duration: 0.5, extraBounce: 0.2),
-                                   value: construction == viewModel.selectedConstruction)
-                        .onTapGesture {
-                            viewModel.selectedConstruction = construction
-                            viewModel.updateMapRegion(construction: construction)
-                            triggerMapAnimation.toggle()
-                        }
-                }
+    var mapLayer: some View {
+        Map(coordinateRegion: $viewModel.mapRegion, annotationItems: viewModel.constructions) { construction in
+            MapAnnotation(coordinate: construction.coordinates) {
+                MapAnnotationView(color: .black)
+                    .scaleEffect(viewModel.selectedConstruction == construction ? 1.4 : 1.0)
+                    .onTapGesture {
+                        viewModel.showConstruction(construction: construction)
+                    }
             }
         }
     }
@@ -52,12 +40,13 @@ extension MapView {
         VStack(alignment: .trailing){
             Button {
                 viewModel.resetMapPosition()
-                viewModel.selectedConstruction = nil
-                triggerMapAnimation.toggle()
+                withAnimation {
+                    viewModel.selectedConstruction = nil
+                }
             } label: {
                 RoundedRectangle(cornerRadius: 8)
                     .foregroundStyle(Color.theme.background)
-                    .frame(width: 48 ,height: 48)
+                    .frame(width: 48, height: 48)
                     .overlay {
                         Image(systemName: "location.fill")
                             .font(.title2)
@@ -71,7 +60,7 @@ extension MapView {
     }
     
     var previewSection: some View {
-        ZStack(alignment: .topTrailing){
+        ZStack(alignment: .topTrailing) {
             LocationPreview(construction: viewModel.selectedConstruction!) {
                 viewModel.redirectTo(construction: viewModel.selectedConstruction!)
             } seeDetails: {
@@ -90,6 +79,7 @@ extension MapView {
         .padding(.vertical, 8)
     }
 }
+
 
 #Preview {
     MapView()
